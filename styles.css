@@ -14,18 +14,19 @@
 }
 
 body {
-    background-color: #3A0D6D; /* Dark purple theme */
+    background-color: #1B2631; /* Dark blue theme */
     font-family: Arial, sans-serif;
     color: #E5E5E5;
     margin: 0;
     padding: 0;
+    filter: saturate(200%);
 }
 
 .glass {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     border-radius: 15px;
-    padding: 25px;
+    padding: 35px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
     margin-bottom: 20px;
 }
@@ -39,8 +40,8 @@ body {
 
 .chat-bubble {
     border-radius: 20px;
-    padding: 16px; /* Increased padding */
-    margin: 15px 0; /* Increased margin */
+    padding: 18px; /* Increased padding */
+    margin: 18px 0; /* Increased margin */
     max-width: 85%; /* Slightly larger width */
     font-family: 'KustomFont2', Arial, sans-serif;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
@@ -48,14 +49,14 @@ body {
 }
 
 .chat-bubble.user {
-    background-color: #9B59B6; /* Dark purple for user messages */
+    background-color: #1F4D7B; /* Dark blue for user messages */
     color: white;
     align-self: flex-end;
     border-bottom-left-radius: 0;
 }
 
 .chat-bubble.ai {
-    background-color: #8E44AD; /* Slightly lighter purple for AI messages */
+    background-color: #2C3E50; /* Navy blue for AI messages */
     color: white;
     border-bottom-right-radius: 0;
     display: flex;
@@ -63,10 +64,10 @@ body {
 }
 
 .ai-profile-img {
-    width: 50px;
-    height: 50px;
+    width: 60px; /* Slightly larger image size */
+    height: 60px; /* Slightly larger image size */
     border-radius: 50%;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .input-box {
@@ -89,7 +90,7 @@ body {
     width: 12%;
     padding: 12px;
     border-radius: 30px;
-    background-color: #9B59B6;
+    background-color: #1F4D7B;
     color: white;
     border: none;
     cursor: pointer;
@@ -97,7 +98,7 @@ body {
 }
 
 .input-box button:hover {
-    background-color: #8E44AD;
+    background-color: #2C3E50;
     transform: translateY(-3px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -106,13 +107,13 @@ body {
 .creator-text {
     text-align: center;
     margin-top: 30px;
-    color: #9B59B6;
+    color: #1F4D7B;
     font-size: 18px;
     font-family: 'KustomFont', Arial, sans-serif;
 }
 
 .creator-text a {
-    color: #9B59B6;
+    color: #1F4D7B;
     text-decoration: none;
     font-weight: bold;
 }
@@ -157,23 +158,23 @@ body {
 
 /* New styles for H56 and creator text */
 h1 {
-    font-size: 48px;
+    font-size: 56px; /* Increased size */
     font-family: 'KustomFont', Arial, sans-serif;
     color: #E5E5E5; /* Light grey color */
-    text-shadow: 2px 2px 4px #000000; /* Black text stroke effect */
+    text-shadow: 3px 3px 6px #000000; /* Enhanced black text stroke effect */
 }
 
 p {
     text-align: center;
-    font-size: 18px;
+    font-size: 20px; /* Slightly increased size */
     font-family: 'KustomFont', Arial, sans-serif;
     color: #E5E5E5;
 }
 
 /* New style for creator's name box */
 .creator-name {
-    background-color: #9B59B6;
-    padding: 5px 15px;
+    background-color: #1F4D7B;
+    padding: 8px 18px;
     border-radius: 50px;
     display: inline-block;
 }
