@@ -36,6 +36,10 @@ body {
     overflow-y: auto;
     margin-bottom: 20px;
     padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
 }
 
 .chat-bubble {
@@ -46,6 +50,7 @@ body {
     font-family: 'KustomFont2', Arial, sans-serif;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease-in-out, bounceIn 0.5s ease-out;
+    position: relative;
 }
 
 .chat-bubble.user {
@@ -53,6 +58,7 @@ body {
     color: white;
     align-self: flex-end;
     border-bottom-left-radius: 0;
+    animation: userMessage 1s ease-in-out;
 }
 
 .chat-bubble.ai {
@@ -61,6 +67,7 @@ body {
     border-bottom-right-radius: 0;
     display: flex;
     align-items: center;
+    animation: aiMessage 1s ease-in-out;
 }
 
 .ai-profile-img {
@@ -68,6 +75,7 @@ body {
     height: 60px; /* Slightly larger image size */
     border-radius: 50%;
     margin-right: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .input-box {
@@ -84,6 +92,13 @@ body {
     border: 1px solid #333;
     background-color: #222;
     color: #fff;
+    transition: all 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #1F4D7B;
+    outline: none;
+    background-color: #333;
 }
 
 .input-box button {
@@ -156,6 +171,28 @@ body {
     }
 }
 
+@keyframes userMessage {
+    0% {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aiMessage {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 /* New styles for H56 and creator text */
 h1 {
     font-size: 56px; /* Increased size */
@@ -177,4 +214,8 @@ p {
     padding: 8px 18px;
     border-radius: 50px;
     display: inline-block;
+    font-family: 'KustomFont', Arial, sans-serif;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
